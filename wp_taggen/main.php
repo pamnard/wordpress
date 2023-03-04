@@ -37,7 +37,7 @@ class Wp_TagGen_Main {
 				// Create a new array of tags organized by tag name
 				$new_tags = [];
 				foreach ($tags as $value) {
-					$str = trim(preg_replace('/\n/', '', trim(preg_replace('/\d{1,2}\. /', '', strval($value)))));
+					$str = trim(preg_replace('/\n/', '', trim(preg_replace('/\d{1,2}\./', '', strval($value)))));
 					$str = preg_replace('/^nn/', '', $str);
 					if ((strlen($str) >= 2) && (strlen($str) <= 20)) {
 						$new_tags[] = (string)$str;
